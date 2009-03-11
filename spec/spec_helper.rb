@@ -3,7 +3,7 @@ require 'active_record'
 require 'spec'
 
 Spec::Runner.configure do |config|
-  config.include(ActiveRecordReflectionMatchers)
+  config.include(Sander6::ActiveRecordReflectionMatchers)
 end
 
 # Setup for the test database (in-memory SQLite3)

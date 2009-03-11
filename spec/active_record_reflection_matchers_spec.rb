@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../lib/active_record_reflection_matchers'
 require File.dirname(__FILE__) + '/spec_helper'
 
-describe ActiveRecordReflectionMatchers do
+describe Sander6::ActiveRecordReflectionMatchers do
   describe "#have_one" do
     it "should work" do
       Thong.should have_one(:thung)
