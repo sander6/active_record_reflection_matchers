@@ -1,0 +1,1 @@
+require 'active_record_reflection_matchers' if RAILS_ENV == "test"

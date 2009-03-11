@@ -1,0 +1,19 @@
+Reflection Matchers are a group of RSpec matcher classes and methods to test for proper associations between ActiveRecord::Base classes.
+
+Say you're working on the archetypical blogging application. The following methods are available.
+  Post.should have_many(:comments)
+  Post.should have_many(:taggings).as(:taggable)
+  Post.should have_many(:tags).through(:taggings)
+  
+  Comment.should belong_to(:post)
+  
+  Tag.should have_many(:taggings)
+  Tag.should have_many(:tagged).through(:taggings)
+  
+  Tagging.should belong_to(:taggable).polymorphically
+  
+Some less common ones:
+
+  Something.should have_one(:other_thing)
+  Something.should have_one(:other_thing).through(:some_other_thing)
+  Something.should have_and_belong_to_many(:other_things)
